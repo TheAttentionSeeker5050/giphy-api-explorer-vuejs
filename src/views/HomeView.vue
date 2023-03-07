@@ -1,4 +1,5 @@
 <script >
+import { RouterLink } from 'vue-router'
 
 import SearchResultsContainer from "@/components/SearchResultContainer.vue"
 
@@ -10,23 +11,36 @@ export default {
       searchError: '',
       pageNumber: this.$route.query.page || 1,
       pagination: this.$route.query.pagination || 20,
-      
+      nextPageLink: '',
+      prevPageLink:''
 
     }
   },
   mounted() {
     
+    
+
     if (this.searchText) {
+      // in case there is a query parameter, get request from api
       this.onSearchEvent()
     }
   },
   methods: {
     onSearchEvent() {
-      let pageNumber = this.pagination*this.pageNumber+1
-      console.log("offset:", pageNumber)
+
+      // make up the page number from
+      let offset = this.pagination*this.pageNumber+1
+
+      // set next page and previous page links
+      if (this.pageNumber>1) {
+      this.prevPageLink = `/?page=${parseInt(this.pageNumber)-1}&query=${this.searchText}`
+      
+      }
+
+      this.nextPageLink = `/?page=${parseInt(this.pageNumber)+1}&query=${this.searchText}`
 
       // fetch result data
-      fetch(`https://api.giphy.com/v1/gifs/search?api_key=Vf0EMF6nc67havZHyJ8oVtErI9Ms4QCB&q=${this.searchText}&limit=${this.pagination}&offset=${pageNumber}&rating=g&lang=en`)
+      fetch(`https://api.giphy.com/v1/gifs/search?api_key=Vf0EMF6nc67havZHyJ8oVtErI9Ms4QCB&q=${this.searchText}&limit=${this.pagination}&offset=${offset}&rating=g&lang=en`)
         .then(response => response.json())
         .then(data => this.searchResult = data.data) // the searchResult value is an array
         .catch(error => this.searchError = error)
@@ -80,6 +94,14 @@ export default {
       
     </section>
 
+    <section>
+      <span>
+        <a :href="prevPageLink">Previous page</a>
+      </span>
+      <span>
+        <a :href="nextPageLink" >Next page</a>
+      </span>
+    </section>
     
   </main>
 </template>
