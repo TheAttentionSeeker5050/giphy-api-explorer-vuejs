@@ -5,11 +5,13 @@
 
 // colors
 $pastel-green: #d0f4de;
+$pastel-gray1: #e7e5e5;
+$pastel-gray2: #858383;
 $pastel-beige: #fcf6bd;
-$pastel-blue: #a9def9;
+$pastel-blue: #c2e5f7;
 $dark-red: #bc4749;
 $dark-green: #386641;
-$dark-blue: #073b4c;
+$dark-blue: #176883;
 $orange-1: #ee9b00;
 
 // global styles
@@ -34,18 +36,11 @@ h4 {
 }
 
 // hide the elements with this tag when not in mobile viewport
-.display-on-mobile {
-    display: none;
-}
+
 
 // an easy way to make appear or disappear unwanted elements on mobile, to make it responsive
 @media screen and (max-width: 500px) {
-    .hide-on-mobile {
-        display: none;
-    }
-    .display-on-mobile { 
-        display: block;
-    }
+    
 }
 
 
@@ -57,7 +52,20 @@ body {
         
 
         #nav-links-wrapper {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+
+            li {
+                
+                a {
+                    color: black; 
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $dark-blue; 
+
+                }
+            }
 
             #search-bar-wrapper {
                 border: $dark-blue solid 3px;
@@ -70,6 +78,42 @@ body {
             }
         }
 
+    }
+
+    #results-section {
+        border-radius: 20px;
+        border: $dark-blue solid 3px;
+        // padding: 20px 0;
+        
+        #search-results-title {
+            background-color: $pastel-gray1;
+            padding: 20px;
+            font-size: 1.3rem;
+            border-top-right-radius: 17px;
+            border-top-left-radius: 17px;
+
+        }
+
+               
+    }
+
+    #main-container {
+
+        #search-results-title {
+            border-bottom: $dark-blue solid 3px;
+
+        }
+        
+        #search-image-section {
+            border: $dark-blue solid 3px;
+
+        }
+
+        #search-image-section:hover  {
+            border: 4px $dark-blue solid;
+        }
+
+        
     }
 
     #footer {

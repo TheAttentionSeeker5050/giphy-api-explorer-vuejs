@@ -22,15 +22,14 @@ import HelloWorld from './components/HelloWorld.vue'
     <nav id="navbar">
       <div id="header-wrapper">
         
-        <img src="https://img.icons8.com/plasticine/100/null/giphy.png" alt="Giphy logo" width="70px">
-        <h1>Giphy api explorer</h1>
+        <img src="https://img.icons8.com/plasticine/100/null/giphy.png" alt="Giphy logo" width="70">
+        <h1>GIPHY API EXPLORER</h1>
       </div>
 
       <ul id="nav-links-wrapper">
-        <li id="search-bar-wrapper"><input type="text" name="searchOption"><button type=""><img src="https://img.icons8.com/ios/50/null/search--v1.png" width="20"/></button></li>
-        <li class="hide-on-mobile">Home</li>
-        <li class="hide-on-mobile">About</li>
-        <li class="display-on-mobile"><img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/null/external-horizontal-separated-bars-representing-hamburger-menu-layout-grid-bold-tal-revivo.png" width="20"/></li>
+        <!-- <li id="search-bar-wrapper"><input type="text" name="searchOption"><button type=""><img src="https://img.icons8.com/ios/50/null/search--v1.png" width="20"/></button></li> -->
+        <li ><RouterLink to="/">Home</RouterLink></li>
+        <li ><RouterLink to="#">About</RouterLink></li>
 
       </ul>
     </nav>
