@@ -94,12 +94,12 @@ export default {
       
     </section>
 
-    <section>
+    <section id="pagination-section">
       <span>
-        <a :href="prevPageLink">Previous page</a>
+        <a :href="prevPageLink">&lt;&lt;Previous page</a>
       </span>
       <span>
-        <a :href="nextPageLink" >Next page</a>
+        <a :href="nextPageLink" >Next page&gt;&gt;</a>
       </span>
     </section>
     

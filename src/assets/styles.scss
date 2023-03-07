@@ -113,8 +113,25 @@ body {
             border: 4px $dark-blue solid;
         }
 
-        
+        #pagination-section {
+            
+            span {
+                a {
+                    font-size: 1.3rem;
+                    color: black;
+                    text-decoration: none;
+                }
+    
+                a:hover {
+                    color: $dark-blue;
+                }
+                
+            }
+    
+        }
     }
+        
+    
 
     #footer {
         p {
