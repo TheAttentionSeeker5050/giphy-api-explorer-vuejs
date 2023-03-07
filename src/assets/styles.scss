@@ -1,0 +1,85 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&family=Lora:wght@500;700&family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Quicksand:wght@500;700&family=Raleway:wght@300;500;700&family=Roboto+Mono:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Work+Sans:wght@300;500;700&display=swap');
+
+// colors
+$pastel-green: #d0f4de;
+$pastel-beige: #fcf6bd;
+$pastel-blue: #a9def9;
+$dark-red: #bc4749;
+$dark-green: #386641;
+$dark-blue: #073b4c;
+$orange-1: #ee9b00;
+
+// global styles
+* {
+    font-family: "Monserrat", "Work Sans", "Roboto", sans-serif;
+}
+
+h1, h2, h4 {
+    font-family: "Quicksand", "Inconsolata", "Lora", sans-serif;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+// hide the elements with this tag when not in mobile viewport
+.display-on-mobile {
+    display: none;
+}
+
+// an easy way to make appear or disappear unwanted elements on mobile, to make it responsive
+@media screen and (max-width: 500px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .display-on-mobile { 
+        display: block;
+    }
+}
+
+
+// layout specific styles
+
+body {
+    #navbar {
+        background-color: $pastel-blue;
+        
+
+        #nav-links-wrapper {
+            font-size: 1.3rem;
+
+            #search-bar-wrapper {
+                border: $dark-blue solid 3px;
+                input {
+                    font-size: 1.2rem;
+                }
+            }
+            #search-bar-wrapper:hover  {
+                border: 4px $dark-blue solid;
+            }
+        }
+
+    }
+
+    #footer {
+        p {
+            font-size: 1.2rem;
+
+            a {
+                color: $dark-blue;
+                font-size: 110%;
+            }
+        }
+    }
+}

@@ -18,17 +18,21 @@ import HelloWorld from './components/HelloWorld.vue'
   </header> -->
 
   <header id="app-header">
-    <img src="https://img.icons8.com/plasticine/100/null/giphy.png" alt="Giphy logo">
   
     <nav id="navbar">
-      <h1>Giphy api explorer</h1>
-      <div id="nav-links-wrapper">
-        <ul id="nav-links-list">
-          <li><input type="text" name="searchOption"><button type=""><img src="https://img.icons8.com/ios/50/null/search--v1.png"/></button></li>
-          <li>Home</li>
-          <li>About</li>
-        </ul>
+      <div id="header-wrapper">
+        
+        <img src="https://img.icons8.com/plasticine/100/null/giphy.png" alt="Giphy logo" width="70px">
+        <h1>Giphy api explorer</h1>
       </div>
+
+      <ul id="nav-links-wrapper">
+        <li id="search-bar-wrapper"><input type="text" name="searchOption"><button type=""><img src="https://img.icons8.com/ios/50/null/search--v1.png" width="20"/></button></li>
+        <li class="hide-on-mobile">Home</li>
+        <li class="hide-on-mobile">About</li>
+        <li class="display-on-mobile"><img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/null/external-horizontal-separated-bars-representing-hamburger-menu-layout-grid-bold-tal-revivo.png" width="20"/></li>
+
+      </ul>
     </nav>
   
   </header>
@@ -38,7 +42,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
   <RouterView />
 
-  <footer>
+  <footer id="footer">
     <p>Made by 
       <a href="https://nicolas-castellano.com/" target="_blank">Nicolas Castellano</a>
     </p>
