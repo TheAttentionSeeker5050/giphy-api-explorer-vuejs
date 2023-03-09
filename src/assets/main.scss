@@ -78,3 +78,16 @@
     }
   
 }
+
+#about-main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    gap: 30px;
+    max-width: 1000px;
+    
+    padding: 30px;
+    min-height: 60vh;
+    height: auto;
+
+}

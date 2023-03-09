@@ -7,11 +7,13 @@
 $pastel-green: #d0f4de;
 $pastel-gray1: #e7e5e5;
 $pastel-gray2: #858383;
+$pastel-gray3: #6e6d6d;
 $pastel-beige: #fcf6bd;
-$pastel-blue: #c2e5f7;
+$pastel-blue: #ccebfa;
 $dark-red: #bc4749;
 $dark-green: #386641;
 $dark-blue: #176883;
+$dark-blue2: #2180a0;
 $orange-1: #ee9b00;
 
 // global styles
@@ -29,6 +31,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+    text-align: center;
 }
 
 h4 {
@@ -113,6 +116,24 @@ body {
             border: 4px $dark-blue solid;
         }
 
+        #search-results-wrapper {
+            .image-card {
+                p {
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1.1rem;
+                    }
+
+                    a:hover {
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+
+
+
         #pagination-section {
             
             span {
@@ -125,10 +146,75 @@ body {
                 a:hover {
                     color: $dark-blue;
                 }
+
+                .grayed-out {
+                    color: $pastel-gray3;
+                    font-size: 1.3rem;
+                }
                 
             }
+
+
     
         }
+    }
+
+    #about-main-container {
+        text-align: justify;
+        
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+    #image-view-container {
+    
+        #error-page {
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        #get-image-data-wrapper {
+            #image-section {
+                border: $dark-blue 3px solid;
+            }
+
+            #image-description-section {
+                background-color: $pastel-gray1;
+                border: $dark-blue 3px solid;
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    font-size: 1.2rem;
+                    span {
+                        font-weight: 700;
+                    }
+    
+                }
+
+                button {
+                    background-color: $dark-blue;
+                    padding: 15px 25px;
+                    border-radius: 15px;
+                    border: none;
+                    font-size: 1.2rem;
+                    margin: 15px auto;
+                    color: white;
+
+                    
+                }
+
+                button:hover {
+                    background-color: $dark-blue2;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+
+    
     }
         
     

@@ -1,6 +1,6 @@
 @import './styles.scss';
 @import './main.scss';
-
+// @import "./imageView.scss";
 
 * {
     padding: 0;
@@ -78,7 +78,7 @@ body {
     }
 
     #main-container {
-        min-height: 70vh;
+        min-height: 60vh;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -96,6 +96,7 @@ body {
     }
 
     #footer {
+        margin: 20px 0;
         p {
             text-align: center;
         }

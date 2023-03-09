@@ -1,0 +1,48 @@
+#image-view-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 50px;
+    margin: 40px 0;
+    justify-content: space-around;
+
+    #error-page {
+        margin: auto;
+    }
+
+    #get-image-data-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 20px;
+        justify-content: center;
+
+        section {
+            min-width: 40%;
+        }
+
+        #image-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            gap: 10px;
+            border-radius: 10px;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        #image-description-section {
+            border-radius: 15px;
+            padding: 15px;
+            height: max-content;
+            
+        }
+
+        
+    }
+
+}

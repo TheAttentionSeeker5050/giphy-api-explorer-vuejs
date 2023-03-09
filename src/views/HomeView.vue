@@ -3,6 +3,8 @@ import { RouterLink } from 'vue-router'
 
 import SearchResultsContainer from "@/components/SearchResultContainer.vue"
 
+import PaginationSection from "@/components/PaginationSection.vue"
+
 export default {
   data() {
     return {
@@ -12,12 +14,12 @@ export default {
       pageNumber: this.$route.query.page || 1,
       pagination: this.$route.query.pagination || 20,
       nextPageLink: '',
-      prevPageLink:''
+      prevPageLink:'',
+      currentLocationURL: `http://localhost:5173/${this.$route.fullPath}`
 
     }
   },
   mounted() {
-    
     
 
     if (this.searchText) {
@@ -49,7 +51,8 @@ export default {
   },
   components: {
     // sub components
-    SearchResultsContainer
+    SearchResultsContainer,
+    PaginationSection
   }
 }
 
@@ -60,6 +63,7 @@ export default {
     
     <h2>Search Images</h2>
 
+    <!-- search an input -->
     <form id="search-image-section" @submit.prevent="onSubmit">
       <input type="text"  id="img-search-input"
       v-model="searchText" >
@@ -84,24 +88,23 @@ export default {
           :imageId="image.id"
           :imageURL="image.images.original.url"
           :imageTitle="image.title"
+          :imageAuthor="image.username"
+          :currentLocationURL="currentLocationURL"
         />
       </div>
 
 
       <p v-if="searchError">Error: <br> {{searchError}}</p>
 
-      <!-- pagination -->
       
     </section>
 
-    <section id="pagination-section">
-      <span>
-        <a :href="prevPageLink">&lt;&lt;Previous page</a>
-      </span>
-      <span>
-        <a :href="nextPageLink" >Next page&gt;&gt;</a>
-      </span>
-    </section>
+    <PaginationSection 
+    v-if="searchResult"
+    :prevPageLink="prevPageLink"
+    :nextPageLink="nextPageLink"
+    />
+    
     
   </main>
 </template>

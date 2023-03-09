@@ -1,21 +1,9 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
 
   <header id="app-header">
   
@@ -29,7 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <ul id="nav-links-wrapper">
         <!-- <li id="search-bar-wrapper"><input type="text" name="searchOption"><button type=""><img src="https://img.icons8.com/ios/50/null/search--v1.png" width="20"/></button></li> -->
         <li ><RouterLink to="/">Home</RouterLink></li>
-        <li ><RouterLink to="#">About</RouterLink></li>
+        <li ><RouterLink to="/about">About</RouterLink></li>
 
       </ul>
     </nav>
