@@ -7,6 +7,6 @@
 </p>
 
 <p>To see a live version of this file, visit:   
-    <a href="https://giphy-api-explorer.nicolas-castellano.com/" target="_blank">nicolas-castellano.com</a>
+    <a href="https://giphy-api-explorer.nicolas-castellano.com/" target="_blank">https://giphy-api-explorer.nicolas-castellano.com</a>
 </p>
 
