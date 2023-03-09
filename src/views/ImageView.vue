@@ -32,10 +32,9 @@
 
                 <button @click="goBackToPreviousPage()">Go back to search </button>
             </section>
+
+            
         </div>
-
-        
-
     </main>
 </template>
 
