@@ -2,7 +2,7 @@
 
 ## Description
 
-<p>This is a web application that explores the contents of the Giphy API, the user enters a string of text into the search bar and gets a response of gifs and images. </p>
+<p>This is a web application that explores the contents of the Giphy API, the user enters a string of text into the search bar and gets a response of gifs and images. The site also has pagination features.</p>
 
 ## Technical Specs
 <p>This application was made using Vue.js, the Vite Vue builder, Javascript Fetch API, SASS, and External fonts from Icons8.com</p>
