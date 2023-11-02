@@ -12,6 +12,6 @@
 </p>
 
 <p>To see a live version of this file, visit:   
-    <a href="https://giphy-api-explorer-54465.netlify.app/" target="_blank">https://giphy-api-explorer.nicolas-castellano.com</a>
+    <a href="https://giphy-api-explorer-54465.netlify.app" target="_blank">https://giphy-api-explorer.nicolas-castellano.com</a>
 </p>
 
