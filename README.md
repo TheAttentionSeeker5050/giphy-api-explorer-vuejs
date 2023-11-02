@@ -8,10 +8,10 @@
 <p>This application was made using Vue.js, the Vite Vue builder, Javascript Fetch API, SASS, and External fonts from Icons8.com</p>
 
 <p>You can visit my portfolio website using the following link:   
-    <a href="https://nicolas-castellano.com/" target="_blank">nicolas-castellano.com</a>
+    <a href="/" target="_blank">Personal Site Under Maintenance</a>
 </p>
 
 <p>To see a live version of this file, visit:   
-    <a href="https://giphy-api-explorer.nicolas-castellano.com/" target="_blank">https://giphy-api-explorer.nicolas-castellano.com</a>
+    <a href="https://giphy-api-explorer-54465.netlify.app/" target="_blank">https://giphy-api-explorer.nicolas-castellano.com</a>
 </p>
 
